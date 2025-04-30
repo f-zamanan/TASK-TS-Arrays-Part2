@@ -11,8 +11,13 @@
 
 function isArrayLengthOdd(numbers: number[]): boolean {
   // Your code here
-
-  return false; // replace false with what you see is fit
+  let oddNum: number = numbers.length % 2;
+  let checker: boolean = false;
+  if (oddNum !== 0) {
+    // != 0 this means there is a remainder therfore it is odd => true
+    checker = true;
+  }
+  return checker; // replace false with what you see is fit
 }
 
 /**
@@ -28,6 +33,12 @@ function isArrayLengthOdd(numbers: number[]): boolean {
 
 function isArrayLengthEven(numbers: number[]): boolean {
   // Your code here
+  let evenNum: number = numbers.length % 2;
+  let checker: boolean = false;
+  if (evenNum === 0) {
+    // === 0 this means there is no remainder therfore it is even => true
+    checker = true;
+  }
 
   return false; // replace false with what you see is fit
 }
@@ -43,7 +54,8 @@ function isArrayLengthEven(numbers: number[]): boolean {
 function addLailaToArray(instructors: string[]): string[] {
   // Your code here
 
-  return []; // replace empty array with what you see is fit
+  instructors.push("Laila");
+  return instructors; // replace empty array with what you see is fit
 }
 
 /**
@@ -56,8 +68,9 @@ function addLailaToArray(instructors: string[]): string[] {
  */
 function eliminateTeam(teams: string[]): string {
   // Your code here
+  let eliminatedTeam: string = teams.pop() || "";
 
-  return ""; // replace empty string with what you see is fit
+  return eliminatedTeam; // replace empty string with what you see is fit
 }
 
 export { isArrayLengthOdd, isArrayLengthEven, addLailaToArray, eliminateTeam };
